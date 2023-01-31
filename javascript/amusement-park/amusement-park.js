@@ -35,6 +35,7 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
+  // eslint-disable-next-line no-prototype-builtins
   if (!tickets.hasOwnProperty(ticketId)) return "unknown ticket id";
   else if (tickets[ticketId] === null) return "not sold";
   else return `sold to ${tickets[ticketId]}`;
